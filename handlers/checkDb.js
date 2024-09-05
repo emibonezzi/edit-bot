@@ -33,6 +33,9 @@ module.exports = async (update) => {
         messageID: update.edited_message.message_id,
         chatID: update.edited_message.chat.id,
       });
+
+      // if there's no edit just return
+      if (update.edited_message.text === message.originalText) return;
       // reply to message with original text
       await sendText(
         message.chatID,
