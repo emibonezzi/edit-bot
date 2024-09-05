@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 module.exports = async (chatID, messageID, originalText, newText) => {
-  const newMessage = `🚨👮‍♀️ EDIT POLICE:\nOriginal text: ${originalText}\nNew text:${newText}`;
+  const newMessage = `🚨👮‍♀️ EDIT POLICE 🚨👮‍♀️\n\nOriginal text: ${originalText}\n\nNew text: ${newText}`;
 
   await axios.post(
     `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`,
